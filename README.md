@@ -4,7 +4,7 @@ Simple traceroute program that displays the route (path) and measuring transit d
 ## Usage
 ```make``` to compile.  
 ```make clean``` cleans folder temporary objects (such as * *.o* files).  
-```make distclean``` cleans all compiled programs and left only source files.  
+```make distclean``` cleans all compiled programs and leaves only source files.  
   
 ```
 sudo ./main valid_ip_addres
