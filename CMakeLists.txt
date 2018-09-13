@@ -2,6 +2,16 @@ cmake_minimum_required(VERSION 3.10)
 project(traceroute)
 
 set(CMAKE_CXX_FLAGS "-std=c++14 -Wall -Wextra -Wpedantic")
+
+find_program(CMAKE_CXX_CPPCHECK NAMES cppcheck)
+if (CMAKE_CXX_CPPCHECK)
+    list(
+        APPEND CMAKE_CXX_CPPCHECK 
+            "--enable=all"
+            "--suppress=*:*include\*"
+        )
+endif()
+
 message(STATUS "Building with the following extra flags: ${CMAKE_CXX_FLAGS}")
 
 include_directories(

@@ -9,7 +9,6 @@ bool stop = false;
 
 int main(int argc, const char *argv[])
 {
-
     argumentValidation(argc, argv);
 
     int sockfd = socket(AF_INET, SOCK_RAW, IPPROTO_ICMP);
